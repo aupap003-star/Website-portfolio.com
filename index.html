@@ -1,25 +1,391 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Sky</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
+    <title>My Portfolio Website</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>☁️ My Portfolio Website</h1>
+    <!-- =========================
+         BACKGROUND LANGIT
+    ========================== -->
 
-    <p>Selamat Datang Di Website Saya</p>
+    <div class="sky">
 
-    <button onclick="alert('Halo! 👋')">
-        Klik Saya
-    </button>
+        <!-- AWAN -->
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
 
+        <!-- BURUNG -->
+        <div class="bird bird-1">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="bird bird-2">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="bird bird-3">
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <!-- LOGO -->
+            <div class="logo">
+                ☁️ MySky
+            </div>
+
+            <!-- TOMBOL MENU HP -->
+            <button
+                class="menu-button"
+                onclick="toggleMenu()">
+
+                ☰
+
+            </button>
+
+
+            <!-- MENU -->
+            <ul id="navMenu">
+
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        Tentang
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#project">
+                        Project
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Kontak
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <main>
+
+        <section
+            id="home"
+            class="hero">
+
+            <div class="hero-content">
+
+                <div class="welcome">
+                    ✨ WELCOME ✨
+                </div>
+
+                <h1>
+                    Welcome to
+                    <span>My Portfolio Website</span>
+                </h1>
+
+                <p>
+                    Selamat datang di website saya.
+                    Tempat sederhana untuk berbagi
+                    karya, project, dan kreativitas.
+                </p>
+
+
+                <!-- TOMBOL -->
+
+                <div class="buttons">
+
+                    <a
+                        href="#about"
+                        class="button">
+
+                        Mulai Jelajah 
+
+                    </a>
+
+                    <a
+                        href="#project"
+                        class="button outline">
+
+                        Project ☁️✨
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TENTANG SAYA
+        ========================== -->
+
+        <section
+            id="about"
+            class="section">
+
+            <div class="title">
+
+                <span>♡</span>
+
+                <h2>
+                    Tentang Saya
+                </h2>
+
+                <span>♡</span>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="profile">
+                    ☁️
+                </div>
+
+
+                <div class="about-text">
+
+                    <h3>
+                        Halo! 👋
+                    </h3>
+
+                    <p>
+                        Saya sedang belajar membuat
+                        website menggunakan HTML,
+                        CSS, dan JavaScript.
+                    </p>
+
+                    <p>
+                        Website ini dibuat dengan
+                        konsep langit biru yang
+                        tenang, awan putih lembut,
+                        dan sedikit sentuhan pink.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECT
+        ========================== -->
+
+        <section
+            id="project"
+            class="section">
+
+            <div class="title">
+
+                <span>♡</span>
+
+                <h2>
+                    Project Saya
+                </h2>
+
+                <span>♡</span>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- PROJECT 1 -->
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🌐
+                    </div>
+
+                    <h3>
+                        Website
+                    </h3>
+
+                    <p>
+                        Website sederhana dengan
+                        HTML dan CSS.
+                    </p>
+
+                    <button
+                        onclick="showProject('Website')">
+
+                        Lihat
+
+                    </button>
+
+                </div>
+
+
+                <!-- PROJECT 2 -->
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        JavaScript
+                    </h3>
+
+                    <p>
+                        Project interaktif dengan
+                        JavaScript.
+                    </p>
+
+                    <button
+                        onclick="showProject('JavaScript')">
+
+                        Lihat
+
+                    </button>
+
+                </div>
+
+
+                <!-- PROJECT 3 -->
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🚀
+                    </div>
+
+                    <h3>
+                        GitHub
+                    </h3>
+
+                    <p>
+                        Website yang dipublikasikan
+                        menggunakan GitHub Pages.
+                    </p>
+
+                    <button
+                        onclick="showProject('GitHub')">
+
+                        Lihat
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             KONTAK
+        ========================== -->
+
+        <section
+            id="contact"
+            class="section contact">
+
+            <div class="title">
+
+                <span>♡</span>
+
+                <h2>
+                    Terima Kasih
+                </h2>
+
+                <span>♡</span>
+
+            </div>
+
+
+            <p>
+                Terima kasih sudah berkunjung
+                ke website saya.
+            </p>
+
+
+            <button
+                class="button"
+                onclick="sayHello()">
+
+              
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-cloud">
+            ☁️　☁️　☁️
+        </div>
+
+        <p>
+            © 2026 My Portfolio Website
+        </p>
+
+        <small>
+            Made with HTML • CSS • JavaScript
+        </small>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
+
 </html>
