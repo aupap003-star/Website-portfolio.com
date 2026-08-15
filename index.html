@@ -4,31 +4,26 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>My Portfolio Website</title>
+    <title>Welcome To My Portfolio Website</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- =========================
-         BACKGROUND LANGIT
+         BACKGROUND
     ========================== -->
 
     <div class="sky">
 
-        <!-- AWAN -->
         <div class="cloud cloud-1"></div>
         <div class="cloud cloud-2"></div>
         <div class="cloud cloud-3"></div>
 
-        <!-- BURUNG -->
         <div class="bird bird-1">
             <span></span>
             <span></span>
@@ -55,12 +50,10 @@
 
         <nav class="navbar">
 
-            <!-- LOGO -->
             <div class="logo">
-                ☁️ MySky
+                ☁️ My Portfolio
             </div>
 
-            <!-- TOMBOL MENU HP -->
             <button
                 class="menu-button"
                 onclick="toggleMenu()">
@@ -69,32 +62,34 @@
 
             </button>
 
-
-            <!-- MENU -->
             <ul id="navMenu">
 
                 <li>
-                    <a href="#home">
-                        Home
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                
+
+                <li>
+                    <a href="#project">Project</a>
+                </li>
+
+                <li>
+                    <a href="#experience">
+                        Experience
                     </a>
                 </li>
 
                 <li>
-                    <a href="#about">
-                        Tentang
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#project">
-                        Project
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#contact">
-                        Kontak
-                    </a>
+                    <a href="#contact">Contact</a>
                 </li>
 
             </ul>
@@ -104,15 +99,13 @@
     </header>
 
 
-    <!-- =========================
-         HOME
-    ========================== -->
-
     <main>
 
-        <section
-            id="home"
-            class="hero">
+        <!-- =========================
+             HOME
+        ========================== -->
+
+        <section id="home" class="hero">
 
             <div class="hero-content">
 
@@ -121,35 +114,25 @@
                 </div>
 
                 <h1>
-                    Welcome to
-                    <span>My Portfolio Website</span>
+                    Hello, I'm
+                    <span>Awfhianti</span>
                 </h1>
 
                 <p>
-                    Selamat datang di website saya.
-                    Tempat sederhana untuk berbagi
-                    karya, project, dan kreativitas.
+                    Selamat datang di website portfolio saya.
+                    
                 </p>
-
-
-                <!-- TOMBOL -->
 
                 <div class="buttons">
 
-                    <a
-                        href="#about"
-                        class="button">
-
-                        Mulai Jelajah 
-
+                    <a href="#about"
+                       class="button">
+                        About Me 
                     </a>
 
-                    <a
-                        href="#project"
-                        class="button outline">
-
-                        Project ☁️✨
-
+                    <a href="#project"
+                       class="button outline">
+                        My Project ☁️✨
                     </a>
 
                 </div>
@@ -160,52 +143,81 @@
 
 
         <!-- =========================
-             TENTANG SAYA
+             ABOUT
         ========================== -->
 
-        <section
-            id="about"
-            class="section">
+        <section id="about" class="section">
 
             <div class="title">
-
                 <span>♡</span>
-
-                <h2>
-                    Tentang Saya
-                </h2>
-
+                <h2>About Me</h2>
                 <span>♡</span>
-
             </div>
 
 
-            <div class="about-card">
+            <div class="profile-card">
 
-                <div class="profile">
-                    ☁️
+                <div class="profile-photo">
+
+                    <img
+                        src="foto.jpg"
+                        alt="Foto Profil">
+
                 </div>
 
 
-                <div class="about-text">
+                <div class="profile-info">
 
+                    <h2>
+                        Awfhianti
+                    </h2>
+                        SOFTWARE ENGINEERING STUDENT
                     <h3>
-                        Halo! 👋
+                       
                     </h3>
 
                     <p>
-                        Saya sedang belajar membuat
-                        website menggunakan HTML,
-                        CSS, dan JavaScript.
+                        Saya adalah seseorang yang
+                        memiliki semangat untuk belajar,
+                        berkembang, dan mencoba hal-hal baru.
                     </p>
 
+
+                  
                     <p>
-                        Website ini dibuat dengan
-                        konsep langit biru yang
-                        tenang, awan putih lembut,
-                        dan sedikit sentuhan pink.
+                        Saya tertarik pada dunia teknologi,
+                        desain website, dan pengembangan
+                        web menggunakan HTML, CSS,
+                        serta JavaScript.
                     </p>
 
+                </div>
+
+            </div>
+
+
+            <div class="data-diri">
+
+                <h3>📋 Personal Information</h3>
+
+                <div class="data-item">
+                    <strong>Nama</strong>
+                    <span>Awfhianti</span>
+                </div>
+
+                <div class="data-item">
+                    <strong>Pendidikan</strong>
+                    <span>SMKN-REKAYASA PERANGKAT LUNAK</span>
+                </div>
+
+                <div class="data-item">
+                    <strong>Fokus</strong>
+                    <span>WEB Development</span>
+                </div>
+
+                <div class="data-item">
+                    <strong>Status</strong>
+                    <span>Pelajar</span>
                 </div>
 
             </div>
@@ -214,30 +226,19 @@
 
 
         <!-- =========================
-             PROJECT
+             SKILLS
         ========================== -->
 
-        <section
-            id="project"
-            class="section">
+        <section id="skills" class="section">
 
             <div class="title">
-
                 <span>♡</span>
-
-                <h2>
-                    Project Saya
-                </h2>
-
+                <h2>My Skills</h2>
                 <span>♡</span>
-
             </div>
 
 
             <div class="cards">
-
-
-                <!-- PROJECT 1 -->
 
                 <div class="card">
 
@@ -245,26 +246,73 @@
                         🌐
                     </div>
 
-                    <h3>
-                        Website
-                    </h3>
+                    <h3>HTML</h3>
 
                     <p>
-                        Website sederhana dengan
-                        HTML dan CSS.
+                        Membuat struktur dan
+                        halaman website.
                     </p>
-
-                    <button
-                        onclick="showProject('Website')">
-
-                        Lihat
-
-                    </button>
 
                 </div>
 
 
-                <!-- PROJECT 2 -->
+                <div class="card">
+
+                    <div class="card-icon">
+                        🎨
+                    </div>
+
+                    <h3>CSS</h3>
+
+                    <p>
+                        Mendesain tampilan website
+                        agar menarik dan responsif.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        ⚡
+                    </div>
+
+                    <h3>JavaScript</h3>
+
+                    <p>
+                        Membuat website menjadi
+                        lebih interaktif.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        
+
+                    
+
+            
+
+
+        <!-- =========================
+             PROJECT
+        ========================== -->
+
+        <section id="project" class="section">
+
+            <div class="title">
+                <span>♡</span>
+                <h2>My Project</h2>
+                <span>♡</span>
+            </div>
+
+
+            <div class="cards">
 
                 <div class="card">
 
@@ -273,25 +321,48 @@
                     </div>
 
                     <h3>
-                        JavaScript
+                        Portfolio Website
                     </h3>
 
                     <p>
-                        Project interaktif dengan
-                        JavaScript.
+                        Website portfolio pribadi
+                        menggunakan HTML dan CSS.
                     </p>
 
                     <button
-                        onclick="showProject('JavaScript')">
+                        onclick="showProject('Portfolio Website')">
 
-                        Lihat
+                        Lihat Project
 
                     </button>
 
                 </div>
 
 
-                <!-- PROJECT 3 -->
+                <div class="card">
+
+                    <div class="card-icon">
+                        🌐
+                    </div>
+
+                    <h3>
+                        Website Project
+                    </h3>
+
+                    <p>
+                        Project website yang
+                        sedang dikembangkan.
+                    </p>
+
+                    <button
+                        onclick="showProject('Website Project')">
+
+                        Lihat Project
+
+                    </button>
+
+                </div>
+
 
                 <div class="card">
 
@@ -300,20 +371,13 @@
                     </div>
 
                     <h3>
-                        GitHub
+                        Future Project
                     </h3>
 
                     <p>
-                        Website yang dipublikasikan
-                        menggunakan GitHub Pages.
+                        Project yang akan dibuat
+                        di masa mendatang.
                     </p>
-
-                    <button
-                        onclick="showProject('GitHub')">
-
-                        Lihat
-
-                    </button>
 
                 </div>
 
@@ -323,37 +387,120 @@
 
 
         <!-- =========================
-             KONTAK
+             EXPERIENCE
         ========================== -->
 
-        <section
-            id="contact"
-            class="section contact">
+        <section id="experience" class="section">
 
             <div class="title">
-
                 <span>♡</span>
-
-                <h2>
-                    Terima Kasih
-                </h2>
-
+                <h2>Experience</h2>
                 <span>♡</span>
+            </div>
 
+
+            <div class="experience">
+
+                <div class="experience-item">
+
+                    <h3>
+                        💻 Website Development
+                    </h3>
+
+                    <p>
+                        Mempelajari dan membuat website
+                        menggunakan HTML, CSS, dan
+                        JavaScript.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-item">
+
+                    <h3>
+                        📚 Self Learning
+                    </h3>
+
+                    <p>
+                        Belajar mengenai pemrograman,
+                        desain website, dan teknologi
+                        secara mandiri.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-item">
+
+                    <h3>
+                        🚀 Personal Project
+                    </h3>
+
+                    <p>
+                        Mengembangkan project pribadi
+                        sebagai latihan dan pengalaman.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section id="contact"
+                 class="section contact">
+
+            <div class="title">
+                <span>♡</span>
+                <h2>Contact Me</h2>
+                <span>♡</span>
             </div>
 
 
             <p>
-                Terima kasih sudah berkunjung
-                ke website saya.
+                Terima kasih sudah mengunjungi
+                portfolio saya.
             </p>
+
+            <p>
+                Jika ingin menghubungi saya,
+                silakan gunakan kontak berikut.
+            </p>
+
+
+            <div class="contact-info">
+
+                <p>
+                    📧 Email:
+                    aupap003@gmail.com
+                </p>
+
+                <p>
+                    📱 WhatsApp:
+                    0812-3456-7890
+                </p>
+
+                <p>
+                    🌐 GitHub:
+                    https://aupap003-star.github.io/Website-portfolio.com/
+                </p>
+
+            </div>
 
 
             <button
                 class="button"
                 onclick="sayHello()">
 
-              
+                Say Hello 💗
 
             </button>
 
@@ -373,7 +520,7 @@
         </div>
 
         <p>
-            © 2026 My Portfolio Website
+            © 2026 My Portfolio
         </p>
 
         <small>
@@ -384,6 +531,7 @@
 
 
     <!-- JAVASCRIPT -->
+
     <script src="script.js"></script>
 
 </body>
