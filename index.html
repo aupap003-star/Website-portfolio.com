@@ -7,25 +7,91 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Portfolio Saya</title>
+    <meta name="description"
+          content="Website portfolio dengan tema langit biru dan bunga">
+
+    <title>My Sky Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- =========================
+         LANGIT / BACKGROUND
+    ========================== -->
+
+    <div class="sky">
+
+        <!-- BINTANG KECIL -->
+        <div class="stars"></div>
+
+
+        <!-- AWAN -->
+        <div class="cloud cloud-1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="cloud cloud-2">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="cloud cloud-3">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <!-- BURUNG -->
+        <div class="bird bird-1">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="bird bird-2">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="bird bird-3">
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <!-- BUNGA JATUH -->
+        <div id="flowers"></div>
+
+    </div>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
     <header>
+
         <nav class="navbar">
 
-            <h2 class="logo">MyPortfolio</h2>
+            <div class="logo">
+                🌸 Portfolio
+            </div>
 
-            <button class="menu-btn"
-                    onclick="toggleMenu()">
+            <button
+                class="menu-button"
+                onclick="toggleMenu()">
+
                 ☰
+
             </button>
 
             <ul id="navMenu">
+
                 <li>
                     <a href="#home">Home</a>
                 </li>
@@ -41,154 +107,269 @@
                 <li>
                     <a href="#contact">Kontak</a>
                 </li>
+
             </ul>
 
         </nav>
+
     </header>
 
 
-    <!-- HOME -->
-    <section id="home" class="hero">
+    <!-- =========================
+         HOME
+    ========================== -->
 
-        <div class="hero-content">
+    <main>
 
-            <p class="welcome">
-                HALO, SELAMAT DATANG 👋
+        <section
+            id="home"
+            class="hero">
+
+            <div class="hero-content">
+
+                <div class="hello">
+                    ✨ SELAMAT DATANG ✨
+                </div>
+
+                <h1>
+                    Welcome to
+                    <span>My Portfolio</span>
+                </h1>
+
+                <p>
+                    Sebuah ruang kecil penuh warna,
+                    awan lembut, bunga, dan mimpi.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#about"
+                        class="main-button">
+
+                        Mulai Jelajah ☁️
+
+                    </a>
+
+                    <a
+                        href="#project"
+                        class="second-button">
+
+                        Lihat Project 🌸
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TENTANG
+        ========================== -->
+
+        <section
+            id="about"
+            class="section">
+
+            <div class="section-title">
+
+                <span>🌷</span>
+
+                <h2>Tentang Saya</h2>
+
+                <span>🌷</span>
+
+            </div>
+
+            <div class="about-box">
+
+                <div class="about-icon">
+                    ☁️
+                </div>
+
+                <div>
+
+                    <h3>
+                        Hai! 👋
+                    </h3>
+
+                    <p>
+                        Saya sedang belajar membuat website
+                        menggunakan HTML, CSS, dan JavaScript.
+                        Website ini dibuat dengan tema langit
+                        biru yang lembut dan penuh bunga.
+                    </p>
+
+                    <p>
+                        Semua animasi di halaman ini dibuat
+                        menggunakan CSS dan JavaScript.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECT
+        ========================== -->
+
+        <section
+            id="project"
+            class="section">
+
+            <div class="section-title">
+
+                <span>🌸</span>
+
+                <h2>Project Saya</h2>
+
+                <span>🌸</span>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        ☁️
+                    </div>
+
+                    <h3>
+                        Sky Website
+                    </h3>
+
+                    <p>
+                        Website dengan tema langit
+                        biru dan awan lembut.
+                    </p>
+
+                    <button
+                        onclick="projectMessage('Sky Website')">
+
+                        Lihat
+
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🌸
+                    </div>
+
+                    <h3>
+                        Flower Animation
+                    </h3>
+
+                    <p>
+                        Animasi bunga yang jatuh
+                        dengan lembut dari langit.
+                    </p>
+
+                    <button
+                        onclick="projectMessage('Flower Animation')">
+
+                        Lihat
+
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🐦
+                    </div>
+
+                    <h3>
+                        Flying Birds
+                    </h3>
+
+                    <p>
+                        Burung-burung terbang
+                        melintasi halaman website.
+                    </p>
+
+                    <button
+                        onclick="projectMessage('Flying Birds')">
+
+                        Lihat
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             KONTAK
+        ========================== -->
+
+        <section
+            id="contact"
+            class="section contact">
+
+            <div class="section-title">
+
+                <span>💗</span>
+
+                <h2>Terima Kasih</h2>
+
+                <span>💗</span>
+
+            </div>
+
+            <p>
+                Terima kasih sudah mengunjungi
+                website saya.
             </p>
 
-            <h1>
-                Saya adalah
-                <span>Web Portfolio</span>
-            </h1>
+            <button
+                class="main-button"
+                onclick="sayHello()">
 
-            <p class="description">
-                Ini adalah website portfolio sederhana
-                yang dibuat menggunakan HTML, CSS,
-                dan JavaScript.
-            </p>
+                Kirim Senyuman 💗
 
-            <a href="#about" class="button">
-                Mulai Lihat
-            </a>
+            </button>
 
-        </div>
+        </section>
 
-    </section>
+    </main>
 
 
-    <!-- TENTANG -->
-    <section id="about" class="section">
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-        <h2>Tentang Saya</h2>
-
-        <p>
-            Halo! Saya sedang belajar membuat website
-            menggunakan HTML, CSS, dan JavaScript.
-        </p>
-
-        <p>
-            Website ini dibuat menggunakan GitHub Pages
-            sehingga dapat diakses melalui internet.
-        </p>
-
-    </section>
-
-
-    <!-- PROJECT -->
-    <section id="project" class="section">
-
-        <h2>Project Saya</h2>
-
-        <div class="cards">
-
-            <div class="card">
-
-                <div class="icon">
-                    🌐
-                </div>
-
-                <h3>
-                    Website
-                </h3>
-
-                <p>
-                    Membuat website menggunakan
-                    HTML dan CSS.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">
-                    ⚡
-                </div>
-
-                <h3>
-                    JavaScript
-                </h3>
-
-                <p>
-                    Membuat website menjadi lebih
-                    interaktif dengan JavaScript.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">
-                    🚀
-                </div>
-
-                <h3>
-                    GitHub
-                </h3>
-
-                <p>
-                    Mempublikasikan website menggunakan
-                    GitHub Pages.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- KONTAK -->
-    <section id="contact" class="section contact">
-
-        <h2>Kontak</h2>
-
-        <p>
-            Terima kasih sudah mengunjungi website saya.
-        </p>
-
-        <button
-            class="button"
-            onclick="showMessage()">
-
-            Klik Saya
-
-        </button>
-
-    </section>
-
-
-    <!-- FOOTER -->
     <footer>
 
-        <p>
-            © 2026 MyPortfolio
-        </p>
+        <div>
+            🌸 ☁️ 🐦 ☁️ 🌸
+        </div>
 
         <p>
-            Dibuat dengan HTML, CSS & JavaScript 
+            © 2026 My Portfolio
         </p>
+
+        <small>
+            Made with HTML, CSS & JavaScript
+        </small>
 
     </footer>
 

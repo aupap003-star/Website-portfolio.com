@@ -1,6 +1,10 @@
+/* =================================
+   RESET
+================================= */
+
 * {
-    margin: 20px;
-    padding: 10px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -9,28 +13,311 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: pink;
-    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #31536b;
+
+    background:
+        linear-gradient(
+            180deg,
+            #87ceeb,
+            #bdefff,
+            #ffffff
+        );
+
+    overflow-x: hidden;
 }
 
 
-/* =========================
+/* =================================
+   SKY
+================================= */
+
+.sky {
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =================================
+   CLOUD
+================================= */
+
+.cloud {
+    position: absolute;
+
+    width: 150px;
+    height: 45px;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border-radius: 50px;
+
+    filter: blur(1px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(255, 255, 255, 0.4);
+
+    animation:
+        cloudMove 35s linear infinite;
+}
+
+.cloud span {
+    position: absolute;
+
+    display: block;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border-radius: 50%;
+}
+
+.cloud span:nth-child(1) {
+    width: 55px;
+    height: 55px;
+
+    left: 20px;
+    bottom: 15px;
+}
+
+.cloud span:nth-child(2) {
+    width: 70px;
+    height: 70px;
+
+    left: 55px;
+    bottom: 12px;
+}
+
+.cloud span:nth-child(3) {
+    width: 48px;
+    height: 48px;
+
+    right: 15px;
+    bottom: 10px;
+}
+
+.cloud-1 {
+    top: 12%;
+    left: -200px;
+
+    animation-delay: 0s;
+}
+
+.cloud-2 {
+    top: 35%;
+    left: -250px;
+
+    transform: scale(0.75);
+
+    animation-delay: 12s;
+}
+
+.cloud-3 {
+    top: 65%;
+    left: -250px;
+
+    transform: scale(0.6);
+
+    animation-delay: 22s;
+}
+
+@keyframes cloudMove {
+
+    from {
+        left: -250px;
+    }
+
+    to {
+        left: 110%;
+    }
+
+}
+
+
+/* =================================
+   BIRDS
+================================= */
+
+.bird {
+    position: absolute;
+
+    width: 45px;
+    height: 30px;
+
+    animation:
+        birdFly 18s linear infinite;
+}
+
+.bird span {
+    position: absolute;
+
+    width: 25px;
+    height: 12px;
+
+    border-top:
+        3px solid #54788e;
+
+    border-radius: 50%;
+}
+
+.bird span:first-child {
+    left: 0;
+
+    transform:
+        rotate(20deg);
+}
+
+.bird span:last-child {
+    right: 0;
+
+    transform:
+        rotate(-20deg);
+}
+
+.bird-1 {
+    top: 20%;
+
+    left: -60px;
+
+    animation-delay: 2s;
+}
+
+.bird-2 {
+    top: 42%;
+
+    left: -100px;
+
+    transform: scale(0.7);
+
+    animation-delay: 7s;
+}
+
+.bird-3 {
+    top: 15%;
+
+    left: -100px;
+
+    transform: scale(0.5);
+
+    animation-delay: 13s;
+}
+
+@keyframes birdFly {
+
+    0% {
+        left: -100px;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    25% {
+        transform:
+            translateY(-25px)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(5px)
+            scale(1);
+    }
+
+    75% {
+        transform:
+            translateY(-20px)
+            scale(1);
+    }
+
+    100% {
+        left: 110%;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =================================
+   FALLING FLOWERS
+================================= */
+
+.flower {
+    position: absolute;
+
+    top: -50px;
+
+    color: #ff8fbd;
+
+    font-size: 20px;
+
+    opacity: 0.8;
+
+    animation:
+        fall linear forwards;
+}
+
+@keyframes fall {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    90% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =================================
    NAVBAR
-========================= */
+================================= */
 
 header {
     position: fixed;
+
     top: 0;
     left: 0;
 
     width: 100%;
 
-    z-index: 1000;
+    z-index: 100;
 
-    background: rgba(15, 23, 42, 0.9);
+    background:
+        rgba(255, 255, 255, 0.75);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter:
+        blur(12px);
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.7);
 }
 
 .navbar {
@@ -38,17 +325,23 @@ header {
 
     margin: auto;
 
-    padding: 18px 20px;
+    padding:
+        15px 20px;
 
     display: flex;
 
     align-items: center;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 }
 
 .logo {
-    color: skyblue;
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #248ec1;
 }
 
 .navbar ul {
@@ -60,43 +353,43 @@ header {
 }
 
 .navbar a {
-    color: white;
+    color: #31536b;
 
     text-decoration: none;
+
+    font-weight: bold;
 
     transition: 0.3s;
 }
 
 .navbar a:hover {
-    color: skyblue;
+    color: #ff75ad;
 }
 
-
-/* MENU MOBILE */
-
-.menu-btn {
+.menu-button {
     display: none;
-
-    background: none;
 
     border: none;
 
-    color: pink;
+    background: none;
 
     font-size: 28px;
+
+    color: #31536b;
 
     cursor: pointer;
 }
 
 
-/* =========================
-   HOME
-========================= */
+/* =================================
+   HERO
+================================= */
 
 .hero {
     min-height: 100vh;
 
-    padding: 120px 20px 60px;
+    padding:
+        120px 20px 70px;
 
     display: flex;
 
@@ -105,21 +398,16 @@ header {
     align-items: center;
 
     text-align: center;
-
-    background:
-        radial-gradient(
-            circle at top,
-            skyblue,
-            whitesmoke%
-        );
 }
 
 .hero-content {
-    max-width: 750px;
+    max-width: 800px;
+
+    padding: 40px 20px;
 }
 
-.welcome {
-    color: skyblue;
+.hello {
+    color: #ff6fa9;
 
     font-weight: bold;
 
@@ -127,25 +415,32 @@ header {
 }
 
 .hero h1 {
-    font-size: clamp(
-        40px,
-        8vw,
-        75px
-    );
+    font-size:
+        clamp(42px, 9vw, 80px);
 
     line-height: 1.1;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 3px 10px
+        rgba(55, 120, 160, 0.3);
 
     margin-bottom: 25px;
 }
 
 .hero h1 span {
-    color: pink;
+    display: block;
+
+    color: #ff75ad;
 }
 
-.description {
-    color: #cbd5e1;
+.hero p {
+    font-size: 18px;
 
     line-height: 1.7;
+
+    color: #31536b;
 
     max-width: 600px;
 
@@ -153,77 +448,187 @@ header {
 }
 
 
-/* =========================
+/* =================================
    BUTTON
-========================= */
+================================= */
 
-.button {
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.main-button,
+.second-button,
+.card button {
     display: inline-block;
-
-    margin-top: 30px;
-
-    padding: 14px 25px;
-
-    background: pink;
-
-    color: white;
 
     border: none;
 
-    border-radius: 10px;
+    cursor: pointer;
 
-    text-decoration: none;
+    border-radius: 50px;
 
     font-weight: bold;
 
-    cursor: pointer;
+    text-decoration: none;
 
-    transition: 0.3s;
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
 }
 
-.button:hover {
-    transform: translateY(-4px);
+.main-button {
+    padding:
+        15px 28px;
 
-    opacity: 0.85;
+    background:
+        linear-gradient(
+            135deg,
+            #48bde9,
+            #75d5f4
+        );
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px
+        rgba(45, 170, 220, 0.3);
+}
+
+.second-button {
+    padding:
+        15px 28px;
+
+    background: white;
+
+    color: #329ac8;
+
+    border:
+        2px solid
+        #8bdcf8;
+}
+
+.main-button:hover,
+.second-button:hover,
+.card button:hover {
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(70, 180, 220, 0.3);
 }
 
 
-/* =========================
+/* =================================
    SECTION
-========================= */
+================================= */
 
 .section {
     max-width: 1000px;
 
     margin: auto;
 
-    padding: 100px 20px;
-
-    text-align: center;
+    padding:
+        90px 20px;
 }
 
-.section h2 {
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    color: #278bb7;
+
     font-size: 35px;
-
-    margin-bottom: 25px;
 }
 
-.section > p {
-    color: #cbd5e1;
+.section-title span {
+    color: #ff75ad;
 
-    line-height: 1.8;
+    font-size: 25px;
+}
+
+
+/* =================================
+   ABOUT
+================================= */
+
+.about-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 35px;
+
+    background:
+        rgba(255, 255, 255, 0.8);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.9);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(70, 150, 190, 0.12);
+}
+
+.about-icon {
+    min-width: 100px;
+
+    height: 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        #e8faff;
+
+    font-size: 50px;
+}
+
+.about-box h3 {
+    color: #ff70a9;
+
+    margin-bottom: 12px;
+}
+
+.about-box p {
+    color: #527084;
+
+    line-height: 1.7;
 
     margin-bottom: 10px;
 }
 
 
-/* =========================
-   CARD
-========================= */
+/* =================================
+   CARDS
+================================= */
 
 .cards {
-    margin-top: 40px;
-
     display: grid;
 
     grid-template-columns:
@@ -232,116 +637,187 @@ header {
             minmax(220px, 1fr)
         );
 
-    gap: 20px;
+    gap: 22px;
 }
 
 .card {
-    padding: 30px 20px;
+    padding: 30px 22px;
 
-    background: skyblue;
+    text-align: center;
 
-    border: 1px solid #334155;
+    background:
+        rgba(255, 255, 255, 0.82);
 
-    border-radius: 15px;
+    border-radius: 25px;
+
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        0 12px 35px
+        rgba(80, 160, 200, 0.12);
 
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform:
+        translateY(-8px);
 
-    border-color: skyblue;
+    border-color:
+        #ffb6d2;
 }
 
-.icon {
-    font-size: 45px;
+.card-icon {
+    font-size: 50px;
 
     margin-bottom: 15px;
 }
 
 .card h3 {
-    margin-bottom: 10px;
+    color: #278bb7;
+
+    margin-bottom: 12px;
 }
 
 .card p {
-    color: #94a3b8;
+    color: #69818f;
 
     line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+.card button {
+    padding:
+        10px 22px;
+
+    background:
+        #66c9ed;
+
+    color: white;
 }
 
 
-/* =========================
+/* =================================
    CONTACT
-========================= */
+================================= */
 
 .contact {
-    min-height: 400px;
+    text-align: center;
+
+    min-height: 450px;
+}
+
+.contact > p {
+    color: #597384;
+
+    margin-bottom: 10px;
 }
 
 
-/* =========================
+/* =================================
    FOOTER
-========================= */
+================================= */
 
 footer {
-    padding: 30px 20px;
+    padding:
+        35px 20px;
 
     text-align: center;
 
-    background: mediumpurple;
+    background:
+        rgba(255, 255, 255, 0.8);
 
-    color: white;
+    color: #5e8294;
 
     line-height: 1.8;
 }
 
+footer div {
+    font-size: 25px;
 
-/* =========================
+    margin-bottom: 10px;
+}
+
+footer small {
+    color: #9bb0ba;
+}
+
+
+/* =================================
    MOBILE
-========================= */
+================================= */
 
 @media (max-width: 700px) {
 
-    .menu-btn {
+    .menu-button {
         display: block;
     }
 
     .navbar ul {
-
         display: none;
 
         position: absolute;
 
-        top: 70px;
+        top: 65px;
 
         left: 0;
 
         width: 100%;
 
-        padding: 20px;
-
-        background: pink;
+        padding: 25px;
 
         flex-direction: column;
 
         text-align: center;
 
         gap: 20px;
+
+        background:
+            rgba(255, 255, 255, 0.95);
+
+        border-bottom:
+            1px solid
+            #d9f5ff;
     }
 
     .navbar ul.active {
         display: flex;
     }
 
-    .hero {
-        padding-top: 130px;
-    }
-
     .hero h1 {
-        font-size: 45px;
+        font-size: 48px;
     }
 
-    .section {
-        padding: 80px 20px;
+    .hero p {
+        font-size: 16px;
     }
+
+    .about-box {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .main-button,
+    .second-button {
+        width: 90%;
+
+        max-width: 300px;
+
+        text-align: center;
+    }
+
 }
