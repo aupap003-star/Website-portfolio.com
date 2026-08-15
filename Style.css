@@ -1,6 +1,6 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 20px;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -10,7 +10,7 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: #0f172a;
+    background: pink;
     color: white;
 }
 
@@ -48,7 +48,7 @@ header {
 }
 
 .logo {
-    color: #38bdf8;
+    color: skyblue;
 }
 
 .navbar ul {
@@ -68,7 +68,7 @@ header {
 }
 
 .navbar a:hover {
-    color: #38bdf8;
+    color: skyblue;
 }
 
 
@@ -81,7 +81,7 @@ header {
 
     border: none;
 
-    color: white;
+    color: pink;
 
     font-size: 28px;
 
@@ -109,8 +109,8 @@ header {
     background:
         radial-gradient(
             circle at top,
-            #1d4ed8,
-            #0f172a 60%
+            skyblue,
+            whitesmoke%
         );
 }
 
@@ -119,7 +119,7 @@ header {
 }
 
 .welcome {
-    color: #38bdf8;
+    color: skyblue;
 
     font-weight: bold;
 
@@ -139,7 +139,7 @@ header {
 }
 
 .hero h1 span {
-    color: #38bdf8;
+    color: pink;
 }
 
 .description {
@@ -164,9 +164,9 @@ header {
 
     padding: 14px 25px;
 
-    background: #38bdf8;
+    background: pink;
 
-    color: #020617;
+    color: white;
 
     border: none;
 
@@ -238,7 +238,7 @@ header {
 .card {
     padding: 30px 20px;
 
-    background: #1e293b;
+    background: skyblue;
 
     border: 1px solid #334155;
 
@@ -250,7 +250,7 @@ header {
 .card:hover {
     transform: translateY(-8px);
 
-    border-color: #38bdf8;
+    border-color: skyblue;
 }
 
 .icon {
@@ -288,9 +288,9 @@ footer {
 
     text-align: center;
 
-    background: #020617;
+    background: mediumpurple;
 
-    color: #64748b;
+    color: white;
 
     line-height: 1.8;
 }
@@ -320,7 +320,7 @@ footer {
 
         padding: 20px;
 
-        background: #0f172a;
+        background: pink;
 
         flex-direction: column;
 
